@@ -8,10 +8,13 @@ class Instance():
         f = open(os.path.join(folder_path, '/Users/thatsnegar/Library/Mobile Documents/com~apple~CloudDocs/operational-research/Progetto-Ricerca-Operativa-2024-2025-main/data/dummy_problem/weights.json'), 'r')
         self.weights = json.load(f)
         f.close()
-        df = pd.read_csv(os.path.join(folder_path, '/Users/thatsnegar/Library/Mobile Documents/com~apple~CloudDocs/operational-research/Progetto-Ricerca-Operativa-2024-2025-main/data/dummy_problem/distances.csv'), sep = ',', header = None)
+        df = pd.read_csv(os.path.join(folder_path, '/Users/thatsnegar/Library/Mobile Documents/com~apple~CloudDocs/operational-research/Progetto-Ricerca-Operativa-2024-2025-main/data/dummy_problem/service.csv'), sep = ',', header = None)
         self.service = df.values
         df = pd.read_csv(os.path.join(folder_path, '/Users/thatsnegar/Library/Mobile Documents/com~apple~CloudDocs/operational-research/Progetto-Ricerca-Operativa-2024-2025-main/data/dummy_problem/distances.csv'), sep = ',', header = None)
         self.distances = df.values
 
 if __name__ == '__main__':
     inst = Instance('dummy_problem')
+    print("weights:", inst.weights)
+    print("service shape:", inst.service.shape)
+    print("distances shape:", inst.distances.shape)

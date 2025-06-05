@@ -7,22 +7,22 @@ instance_name = 'solver_343747_328556_324836'
 
 folder_path = os.path.join('.', 'data', f'{instance_name}')
 
-f = open(os.path.join(folder_path, 'weights.json'), 'r')
+f = open(os.path.join(folder_path, '/Users/thatsnegar/Library/Mobile Documents/com~apple~CloudDocs/operational-research/Progetto-Ricerca-Operativa-2024-2025-main/data/dummy_problem/weights.json'), 'r')
 weights = json.load(f)
 f.close()
 
-df = pd.read_csv(os.path.join(folder_path, 'service.csv'), sep = ',', header = None)
+df = pd.read_csv(os.path.join(folder_path, '/Users/thatsnegar/Library/Mobile Documents/com~apple~CloudDocs/operational-research/Progetto-Ricerca-Operativa-2024-2025-main/data/dummy_problem/service.csv'), sep = ',', header = None)
 service = df.values
 
-df = pd.read_csv(os.path.join(folder_path, 'distances.csv'), sep = ',', header = None)
+df = pd.read_csv(os.path.join(folder_path, '/Users/thatsnegar/Library/Mobile Documents/com~apple~CloudDocs/operational-research/Progetto-Ricerca-Operativa-2024-2025-main/data/dummy_problem/distances.csv'), sep = ',', header = None)
 distances = df.values
 
 folder_path = os.path.join('.', 'results', f'{instance_name}')
 
-df = pd.read_csv(os.path.join(folder_path, 'deposit_locations.csv'), sep = ',', header = None)
+df = pd.read_csv(os.path.join(folder_path, '/Users/thatsnegar/Library/Mobile Documents/com~apple~CloudDocs/operational-research/Progetto-Ricerca-Operativa-2024-2025-main/results/dummy_problem/deposit_locations.csv'), sep = ',', header = None)
 deposit_locations = df.values
 
-df = pd.read_csv(os.path.join(folder_path, 'path.csv'), sep = ',', header = None)
+df = pd.read_csv(os.path.join(folder_path, '/Users/thatsnegar/Library/Mobile Documents/com~apple~CloudDocs/operational-research/Progetto-Ricerca-Operativa-2024-2025-main/results/dummy_problem/path.csv'), sep = ',', header = None)
 path = df.values
 
 (N_deposits, N_supermarkets) = service.shape

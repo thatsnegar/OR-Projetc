@@ -4,7 +4,9 @@ from solvers import *
 from solutions import *
 import json 
 
-instance_name = 'solver_343747_328556_324836'
+
+instance_name = 'dummy_problem'
+
 
 inst = Instance(instance_name)
 env = Environment(inst)
